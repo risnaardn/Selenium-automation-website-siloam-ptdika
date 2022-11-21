@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginSiloam {
     private final WebDriver driver;
 
-    public LoginSiloam(){
+    public LoginSiloam() {
         this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
     }
@@ -34,26 +34,26 @@ public class LoginSiloam {
     WebElement txtHome;
 
 
-    public void login(String username, String password){
+    public void login(String username, String password) {
         this.username.sendKeys(username);
         this.password.sendKeys(password);
 
     }
 
-    public void setBtnLogin(){
+    public void setBtnLogin() {
         btnLogin.click();
     }
 
-    public String getTxtUsernameRequired(){
+    public String getTxtUsernameRequired() {
         return txtUsernameRequired.getAttribute("required");
     }
 
-    public String getTxtPasswordRequired(){
+    public String getTxtPasswordRequired() {
         return txtPasswordRequired.getAttribute("required");
     }
 
 
-    public String getTxtHome(){
+    public String getTxtHome() {
         return txtHome.getAttribute("Home");
     }
 
