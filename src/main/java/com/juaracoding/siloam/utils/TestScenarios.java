@@ -32,7 +32,21 @@ public enum TestScenarios {
     T28("TCC.SILOAM.122 Menampilkan halaman sebelumnya"),
     T29("TCC.SILOAM.063 Browser menampilkan halaman home siloam"),
     T30("Input form data"),
-    T31("Upload data valid");
+    T31("Upload data valid"),
+    T32("TCC.SILOAM.064 Menampilkan nama karyawan"),
+    T33("TCC.SILOAM.065 Menampilkan nama nomor bpjs"),
+    T34("TCC.SILOAM.066 Menampilkan hasil inputan nomor KTP"),
+    T35("TCC.SILOAM.067 Menampilkan hasil inputan alamat"),
+    T36("TCC.SILOAM.068 Menampilkan inputan Kota KTP"),
+    T37("TCC.SILOAM.069 Menampilkan Inputan Faskes Awal"),
+    T38("TCC.SILOAM.070 Menampilkan Inputan Faskes Tujuan"),
+    T39("TCC.SILOAM.071 User klik button edit"),
+    T40("TCC.SILOAM.073 klik button simpan"),
+    T41("TCC.SILOAM.074 Menampilkan foto before"),
+    T42("TCC.SILOAM.075 Menampilkan foto after"),
+    T43("TCC.SILOAM.076 Menampilkan auto number"),
+    T44("TCC.SILOAM.077 Menampilkan tipe dokumen"),
+    T45("TCC.SILOAM.078 Menampilkan file upload");
 
 
 

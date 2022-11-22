@@ -1,22 +1,22 @@
 package com.juaracoding.siloam.step_definitions;
 
-import com.juaracoding.siloam.pages.LoginSiloam;
 
-import com.juaracoding.siloam.pages.TTDDigital;
-import com.juaracoding.siloam.utils.Constants;
+import com.juaracoding.siloam.pages.LoginSiloam;
+import com.juaracoding.siloam.pages.TTDdigital;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_scouse.An;
+
 import org.openqa.selenium.WebDriver;
+
 
 public class TestTTDdigital {
     private static WebDriver driver;
     private static ExtentTest extentTest;
 
-    private TTDDigital ttdDigital = new TTDDigital();
+    private TTDdigital ttDdigital = new TTDdigital();
 
     private LoginSiloam loginSiloam = new LoginSiloam();
 
@@ -25,93 +25,213 @@ public class TestTTDdigital {
         extentTest = Hooks.extentTest;
     }
 
-
-    // Test case masuk ke halaman new (return sales)
-
-    @When("TCC.SILOAM.063 Browser menampilkan halaman home siloam")
-    public void browser_menampilkan_halaman_home_siloam() {
-        driver.get(Constants.URL);
-        loginSiloam.login("D6200927", "1997-10-23");
-        loginSiloam.setBtnLogin();
-        extentTest.log(LogStatus.PASS, "TCC.SILOAM.095 Browser menampilkan halaman home siloam");
-
+    //UPLOAD DATA FASKES AWAL VALID
+    @When("Klik button Foto Faskes Awal untuk upload foto dokumen")
+    public void klik_uploadfaskesawal() {
+        ttDdigital.clickUploadDataFaskesAwal();
+        extentTest.log(LogStatus.PASS, "Klik button Foto Faskes Awal untuk upload foto dokumen");
     }
 
-    @And("TCC.SILOAM.063 Klik menu input")
-    public void klik_menu_input() {
-        ttdDigital.klikMenuInput();
-        extentTest.log(LogStatus.PASS, "TCC.SILOAM.095 Klik menu input");
+    @And("Klik button choose File")
+    public void choose_file() {
+        String path = System.getProperty("user.dir") + "\\src\\main\\DataUpload\\FaskesAwal.png";
+        ttDdigital.fileUpload(path);
+        extentTest.log(LogStatus.PASS, "Klik button choose File");
     }
 
-
-    @Then("TCC.SILOAM.063 Menampilkan halaman input")
-    public void get_txt_form_menu() {
-        ttdDigital.getTxtRFormInput();
-        extentTest.log(LogStatus.PASS, "TCC.SILOAM.095 Menampilkan halaman input");
+    @And("Mengambil data foto")
+    public void data_foto() {
+        Hooks.delay(1);
+        ttDdigital.clickSave();
+        extentTest.log(LogStatus.PASS, "Mengambil data foto");
     }
 
-    // input data
-    @When("Menampilkan halaman input")
-    public void menampilkan_inpt() {
-         ttdDigital.getTxtRFormInput();
-        extentTest.log(LogStatus.PASS, "Menampilkan halaman input");
-
-    }
-
-    @And("Input nama")
-    public void klik_menu_input_nama() {
-        ttdDigital.setInputNama("Seonji");
-        extentTest.log(LogStatus.PASS, "Input nama");
-    }
-
-
-    @And("Input nomor bpjs")
-    public void klik_menu_input_bpjs() {
-        ttdDigital.setInputNomorBPJS("3124342353099");
-        extentTest.log(LogStatus.PASS, "Input nomor bpjs");
-    }
-
-    @And("input nomor ktp")
-    public void klik_menu_input_ktp() {
-        ttdDigital.setInputNomotKTP("3314537978300787");
-        extentTest.log(LogStatus.PASS, "input nomor ktp");
-    }
-
-
-    @And("input alamat")
-    public void klik_menu_input_alamat() {
-        ttdDigital.setInputAlamat("Jl Jati Asih");
-        extentTest.log(LogStatus.PASS, "input nomor ktp");
-    }
-
-    @And("input kota ktp")
-    public void klik_menu_input_kotaktp() {
-        ttdDigital.setInputKotaKTP("KOTA BEKASI");
-        extentTest.log(LogStatus.PASS, "input kota ktp");
-    }
-
-    @And("input faskes awal")
-    public void klik_menu_input_faskesawal() {
-        ttdDigital.setInputFaskesAwal("Bekasi barat");
-        extentTest.log(LogStatus.PASS, "input faskes awal");
-    }
-
-    @And("input faskes tujuan")
-    public void klik_menu_input_faskestujuan() {
-        ttdDigital.setInputFaskesTujuan("Clinic Jatimakmur || Kota Bekasi");
-        extentTest.log(LogStatus.PASS, "input faskes tujuan");
-    }
-
-    @And("klik button simpan data")
+    @And("Klik simpan untuk menyimpan foto")
     public void btn_simpan_data() {
-        ttdDigital.setBtnSimpanData();
-        extentTest.log(LogStatus.PASS, "klik button simpan data");
+        ttDdigital.clickSave();
+        extentTest.log(LogStatus.PASS, "Klik simpan untuk menyimpan foto");
     }
 
-    @Then("masuk halaman upload data")
-    public void halaman_upload_data() {
-        ttdDigital.getUploadData();
-        extentTest.log(LogStatus.PASS, "masuk halaman upload data");
+    @And("Keluar dari pop up upload foto faskes awal")
+    public void keluar_daripopup() {
+        ttDdigital.clickKeluar();
+        extentTest.log(LogStatus.PASS, "Keluar dari pop up upload foto faskes awal");
     }
+
+    //UPLOAD DATA
+
+    @And("klik button foto faskes tujuan untuk upload data")
+    public void klik_uploadfaskesTujuan() {
+        Hooks.delay(1);
+        ttDdigital.clickUploadDataFaskesTujuan();
+        extentTest.log(LogStatus.PASS, "klik button foto faskes tujuan untuk upload datan");
+    }
+
+    @And("klik button choose file faskes tujuan")
+    public void choose_file_() {
+        String path = System.getProperty("user.dir") + "\\src\\main\\DataUpload\\FaskesTujuan.png";
+        ttDdigital.fileUpload(path);
+        extentTest.log(LogStatus.PASS, "klik button choose file faskes tujuan");
+    }
+
+    @And("mengambil data foto faskes tujuan")
+    public void data_foto_faskes_tujuan() {
+        Hooks.delay(1);
+        ttDdigital.clickSave();
+        extentTest.log(LogStatus.PASS, "mengambil data foto faskes tujuan");
+    }
+
+    @And("klik simpan untuk menympan foto faskes tujuan")
+    public void btn_simpan_data_faskes_tujuan() {
+        ttDdigital.clickSave();
+        extentTest.log(LogStatus.PASS, "klik simpan untuk menympan foto faskes tujuan");
+    }
+
+    @And("keluar dari pop up upload foto faskes tujuan")
+    public void keluar_daripopup_faskes_tujuan() {
+        ttDdigital.clickKeluar();
+        extentTest.log(LogStatus.PASS, "keluar dari pop up upload foto faskes tujuan");
+    }
+
+    //UPLOAD DATA ttd digital
+
+    @And("klik button foto ttd digital tujuan untuk upload data")
+    public void klik_uploadTTDdigital() {
+        ttDdigital.clickUploadDataTTDdigital();
+        extentTest.log(LogStatus.PASS, "klik button foto ttd digital tujuan untuk upload data");
+    }
+
+    @And("klik button choose file ttd digital")
+    public void choose_file_ttddigital() {
+        String path = System.getProperty("user.dir") + "\\src\\main\\DataUpload\\TTDdigital.png";
+        ttDdigital.fileUpload(path);
+        extentTest.log(LogStatus.PASS, "klik button choose file ttd digital");
+    }
+
+    @And("mengambil data foto ttd digital")
+
+    public void data_foto_TTDdigital() {
+        Hooks.delay(1);
+        ttDdigital.clickSave();
+        extentTest.log(LogStatus.PASS, "mengambil data foto ttd digital");
+    }
+
+    @And("klik simpan untuk menympan foto ttd digital")
+    public void btn_simpan_data_ttd_digital() {
+        ttDdigital.clickSave();
+        extentTest.log(LogStatus.PASS, "klik simpan untuk menympan foto ttd digital");
+    }
+
+    @And("keluar dari pop up upload foto ttd digital")
+    public void keluar_daripopup_ttd_digital() {
+
+        ttDdigital.clickKeluar();
+        extentTest.log(LogStatus.PASS, "keluar dari pop up upload foto ttd digital");
+    }
+
+    // button selanjutnya
+
+    @Then("klik button selanjutnya")
+    public void klik_button_selanjutnya() {
+        Hooks.delay(1);
+        ttDdigital.buttonSelanjutnya();
+        extentTest.log(LogStatus.PASS, "klik button selanjutnya");
+    }
+
+    //TTD Digital
+
+    @When("TCC.SILOAM.064 Browser menampilkan form document Nama Karyawan")
+    public void tampil_nama() {
+        ttDdigital.getTxtNama();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.064 Browser menampilkan form document Nama Karyawan");
+    }
+
+    @When("TCC.SILOAM.065 Browser menampilkan form document Nomor BPJS")
+    public void tampil_nomorbpjs() {
+        ttDdigital.getTxtNoBPJS();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.065 Browser menampilkan form document Nomor BPJS");
+    }
+
+    @When("TCC.SILOAM.066 Menampilkan nomor KTP")
+    public void tampil_noktp() {
+        ttDdigital.getTxtNomorKTP();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.066 Menampilkan nomor KTP");
+    }
+
+    @When("TCC.SILOAM.067 Menampilkan alamat")
+    public void tampil_alamat() {
+        ttDdigital.getTxtAlamat();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.067 Menampilkan alamat");
+    }
+
+    @When("TCC.SILOAM.068 Menampilkan Kota KTP")
+    public void tampil_kotaktp() {
+        ttDdigital.getTxtAlamat();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.068 Menampilkan Kota KTP");
+    }
+
+    @When("TCC.SILOAM.069 Menampikan Faskes Awal")
+    public void tampil_faskesawal() {
+        ttDdigital.getTxtFaskesAwal();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.069 Menampikan Faskes Awal");
+    }
+
+    @When("TCC.SILOAM.070 Menampilkan faskes tujuan")
+    public void tampil_fasketujuanl() {
+        ttDdigital.getTxtFaskesTujuan();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.070 Menampilkan faskes tujuan");
+    }
+
+    //Btn Edit
+
+    @When("TCC.SILOAM.071 User klik button edit")
+    public void tampil_btnedit() {
+        ttDdigital.klikBtnEdit();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.071 User klik button edit");
+    }
+
+    // btn Simpan
+    @When("TCC.SILOAM.073 user klik button simpan")
+    public void tampil_btnSimpan() {
+        ttDdigital.setBtnSimpanFormEdit();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.073 user klik button simpan");
+    }
+
+    // faskes awal
+
+    @When("TCC.SILOAM.073 Menampilkan dokumen faskes awal yang sudah di upload")
+    public void tampil_data_before() {
+        ttDdigital.getTxtBefore();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.073 Menampilkan dokumen faskes awal yang sudah di upload");
+    }
+
+    // faskes tujuan
+    @When("TCC.SILOAM.075 Menampilkan dokumen faskes tujuan yang sudah di upload")
+    public void tampil_data_after() {
+        ttDdigital.getTxtAfter();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.075 Menampilkan dokumen faskes tujuan yang sudah di upload");
+    }
+
+    // auto number
+
+    @When("TCC.SILOAM.076 Menampilkan auto number sesuai dengan data yang sudah di upload")
+    public void tampil_no() {
+        ttDdigital.getTxtAfter();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.076 Menampilkan auto number sesuai dengan data yang sudah di upload");
+    }
+
+    @When("TCC.SILOAM.077 menampilkan tipe dokumen yang sudah di upload")
+    public void tampil_tipe_dokumen() {
+        ttDdigital.getTxtTipeDokumen();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.077 menampilkan tipe dokumen yang sudah di upload");
+    }
+
+
+    @When("TCC.SILOAM.078 menampilkan file yang sudah di upload")
+    public void tampil_tipe_file() {
+        ttDdigital.getTxtTFileUpload();
+        extentTest.log(LogStatus.PASS, "TCC.SILOAM.078 menampilkan file yang sudah di upload");
+    }
+
 
 }

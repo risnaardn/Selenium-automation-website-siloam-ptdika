@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58930369-114f-4e36-bdd1-b4656feeb60b" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/TTDDigital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/UploadDataPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/features/TTDdigital.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/features/UploadData.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestTTDdigital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestUploadData_Valid.java" afterDir="false" />
+    <list default="true" id="58930369-114f-4e36-bdd1-b4656feeb60b" name="Changes" comment="add input data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/TTDdigital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/features/04.TTDDigital.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestInputData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/LoginSiloam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/LoginSiloam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/MenuNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/MenuNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/TTDDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/InputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/pages/UploadDataPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/utils/TestScenarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/juaracoding/siloam/utils/TestScenarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/features/02.Return.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/features/Return.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/features/02.Return.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/features/TTDdigital.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/features/03.InputData.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/features/UploadData.feature" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/RunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/RunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestReturn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestReturn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestTTDdigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestTTDdigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/juaracoding/siloam/step_definitions/TestUploadData_Valid.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +44,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/juaracoding/java/Siloam/src/test/java/com/juaracoding/siloam/step_definitions",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/juaracoding/java/Siloam/src/test/java/com/juaracoding/siloam/step_definitions&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\juaracoding\java\Siloam\src\test\java\com\juaracoding\siloam\step_definitions" />
@@ -129,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668333696671</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add input data">
+      <created>1668999772744</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668999772744</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="add input data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add input data" />
   </component>
 </project>
